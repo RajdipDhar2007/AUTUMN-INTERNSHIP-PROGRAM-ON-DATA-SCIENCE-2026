@@ -1,0 +1,21 @@
+
+How to Run
+
+Step 1. Train inside Docker (optional step to show workflow)  
+   
+$ docker run -it --name iris-train -v $(pwd):/app python:3.10-slim bash
+# pip install scikit-learn
+$ docker cp train.py iris-train:/app/
+# python train.py
+# exit
+   
+Step 2. Copy model back
+$ docker cp iris-train:/app/iris_model.pkl .
+
+Step 3. Build serving container
+$ docker build -t iris-streamlit .
+
+Step 4. Run container
+$ docker run -p 8501:8501 iris-streamlit
+
+Step 5. Open browser at http://localhost:8501
