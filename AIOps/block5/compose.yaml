@@ -1,0 +1,20 @@
+services:
+  train:
+    image: iris-compose-demo:latest
+    build: .
+    command: ["python", "train.py"]
+    volumes:
+      - model-data:/models
+
+  app:
+    image: iris-compose-demo:latest
+    ports:
+      - "8501:8501"
+    volumes:
+      - model-data:/models:ro
+    depends_on:
+      train:
+        condition: service_completed_successfully
+
+volumes:
+  model-data:

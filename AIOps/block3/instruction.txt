@@ -1,0 +1,24 @@
+############
+# Manual container management
+#############
+
+# 1. Creating the container 
+docker run -dit --name intelligent-frog python:3.11-slim bash
+
+# 2. Connecting VS code with running container 
+1. Install the official "Dev Containers" Extension (by Microsoft). 
+2. Press F1 (or Ctrl+Shift+P / Cmd+Shift+P) to open the Command Palette.
+3. Type and select Dev Containers: Attach to Running Container....
+4. Choose your running container from the dropdown list.
+5. VS Code will automatically connect and prompt you to open a specific folder inside the container's file system
+
+# 3. Just start developing like you have got a new computer
+1. Create virtual env and pip update
+2. Execute the following pip commands 
+
+pip install --no-cache-dir mediapipe==0.10.14 matplotlib ipykernel
+pip uninstall -y opencv-contrib-python opencv-python
+pip install --no-cache-dir opencv-contrib-python-headless
+
+# 4. From host machine copy the image file and ipynb with `docker cp` command
+# start executing
