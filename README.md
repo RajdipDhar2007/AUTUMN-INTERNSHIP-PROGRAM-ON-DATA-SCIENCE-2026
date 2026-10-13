@@ -418,7 +418,7 @@ docker run -p 8501:8501 iris-streamlit
 
 **Rajdip Dhar**, Data Science Intern, IDEAS-TIH Autumn Internship 2026
 
-[![GitHub](https://img.shields.io/badge/GitHub-Rajdip--Dhar-181717?logo=github)](https://github.com/Rajdip-Dhar)
+[![GitHub](https://img.shields.io/badge/GitHub-Rajdip--Dhar-181717?logo=github)](https://github.com/RajdipDhar2007)
 
 <div align="center">
 
